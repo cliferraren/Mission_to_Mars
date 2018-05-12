@@ -1,11 +1,13 @@
+#Import Dependencies needed to scrape HTML
 import time
 from splinter import Browser
 from bs4 import BeautifulSoup as bs
 
+
+#Function to init browser to Chrome
 def init_browser():
-     # @NOTE: Replace the path with your actual path to the chromedriver
-    executable_path = {"executable_path": "//Users/rck/chrome_driver/chromedriver"}
-    return Browser("chrome", **executable_path, headless=False)
+    path = {"path": "/Users/rck/chrome_driver/chromedriver"}
+    return Browser("chrome", **path, headless=False)
     
 def get_news(browser):
     url = 'https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest'
