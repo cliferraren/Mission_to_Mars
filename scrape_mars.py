@@ -6,11 +6,15 @@ from bs4 import BeautifulSoup as bs
 
 #Function to init browser to Chrome
 def init_browser():
-    path = {"path": "/Users/rck/chrome_driver/chromedriver"}
-    return Browser("chrome", **path, headless=False)
-    
+    executable_path = {"executable_path": "/Users/rck/chrome_driver/chromedriver"}
+    return Browser("chrome", **executable_path, headless=False)
+
+#Function to scrape the Latest News Article from NASA
+#get only the first(latest) article    
 def get_news(browser):
     url = 'https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest'
+    
+    #try catch block to catch if error is encountered, pass will return the title and paragraph element of the article
     try:
         browser.visit(url)
         html_string = browser.html
