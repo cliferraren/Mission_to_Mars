@@ -29,4 +29,4 @@ output ={
  'weather': 'Sol 2043 (May 06, 2018), Sunny, high -14C/6F, low -71C/-95F, pressure at 7.36 hPa, daylight 05:22-17:20'}
 
 output = scrape_mars.scrape() 
-db.general.insert_one(output)
+db.mars_info.insert_one(output)

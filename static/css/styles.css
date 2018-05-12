@@ -12,8 +12,8 @@
 }
 
 .jumbotron {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
     margin-bottom: 0;
     background-color: #fff;
     background-repeat: no-repeat;
@@ -23,8 +23,8 @@
 }
 
 .jumbotron .container {
-    max-width: 40rem;
-    background: rgba(0,0,0,0.1);
+    max-width: 25rem;
+    background: rgba(0,0,0,0.2);
     padding: 1rem;
     color: white;
 }
@@ -69,7 +69,7 @@ table {
     overflow-y: scroll;
 }
 th {
-    background-color:lightseagreen;
+    background-color:dimgray;
     color: white;
 }
 td, th {
