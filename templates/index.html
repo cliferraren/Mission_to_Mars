@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission to Mars</title>
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+    <main role="main">
+        <section class="jumbotron text-xs-center" style="background-image: url('/static/img/mission_to_mars.jpg');">
+            <div class="container">
+                <h1 class="jumbotron-heading">Mission to Mars</h1>
+                <p>
+                    <a href="/scrape" class="btn btn-info my-2">Scrape New Data</a>
+                </p>
+            </div>
+        </section>
+
+        <!--=================================================================-->
+        <div class="album1 py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card mb-12 box-shadow">
+                            <div class="card-body">
+                                <h2>Latest Mars News</h2>
+                                <p class="card-text"><b>{{news.news_title}}</b></p>
+                                <p class="card-text">{{news.news_p}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--=================================================================-->
+        <div class="album2 py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h2 class="card-title">Featured Mars Image</h2>
+                        <div class="card mb-7 box-shadow">
+                            <img class="card-img-top" src={{featured_image_url}} alt="Card image cap">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="col1">
+                            <h4 class="card-title">Current Weather on Mars</h4>
+                            <div class="card mb-5 box-shadow">
+                                <div class="card-body">
+                                    <p class="card-text">{{weather}}
+                                    </p>
+                                </div>
+                            </div>
+
+                            <h4 class="card-title">Mars Facts</h4>
+                            <table class="table" >
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col">value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for key, value in facts.items() %}
+                                        <tr>
+                                            <td style="text-align:right">{{key}}</td>
+                                            <td style="text-align:right">{{value}}</td>
+                                        </tr>
+                                    {% endfor %}                                     
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--=================================================================-->
+
+
+        <div class="album3 py-5 bg-light">
+            <div class="container text-center">
+                <h2>Mars Hemispheres</h2>
+                <div class="row">
+                    {% for dict_item in hemisphere_image_urls %}
+                          <div class="col-md-6">
+                                <div class="card mb-6 box-shadow">
+                                    <img class="card-img-top" src={{dict_item.img_url}} alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text">{{dict_item.title}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <!--=================================================================-->
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>C Ferraren 2018  &copy; USC Viterbi Data Analytics Bootcamp</p>
+        </div>
+    </footer>
+
+
+    <!--jQuery firt, popper.js second, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+
+</html>

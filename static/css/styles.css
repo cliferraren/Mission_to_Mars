@@ -1,0 +1,88 @@
+:root {
+  --jumbotron-padding-y: 1rem;
+}
+
+
+
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: calc(var(--jumbotron-padding-y) * 2);
+    padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+  }
+}
+
+.jumbotron {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    
+}
+
+.jumbotron .container {
+    max-width: 40rem;
+    background: rgba(0,0,0,0.1);
+    padding: 1rem;
+    color: white;
+}
+
+.jumbotron p {
+    color: yellow;
+    text-align: center;
+     
+}
+
+#right_div{
+    float:right !important;
+}
+.jumbotron-heading {
+  font-weight: 300;
+    text-align: center;
+
+}
+
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+.box-shadow { 
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); 
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: auto;
+}
+.table-scroll {
+	height: 32rem !important;
+    overflow-y: scroll;
+}
+th {
+    background-color:lightseagreen;
+    color: white;
+}
+td, th {
+    border: 1px solid white;
+    text-align: center;
+    padding: .2rem;
+}
+
+tr:nth-child(even) {
+    background-color:azure;
+}
+
+tr:nth-child(odd){
+	background: white;
+}
+
