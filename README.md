@@ -94,11 +94,3 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
 ![final_app_part2.png](static/img/final_app_part2.png)
 
 ---
-
-## Hints
-
-* Use splinter to navigate the sites when needed and BeautifulSoup to help find and parse out the necessary data.
-
-* Use Pymongo for CRUD applications for your database. For this homework, you can simply overwrite the existing document each time the `/scrape` url is visited and new data is obtained.
-
-* Use Bootstrap to structure your HTML template.
